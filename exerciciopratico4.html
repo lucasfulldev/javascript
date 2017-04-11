@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+ <TITLE>avitidade</TITLE>
+
+ <script>
+  function trocoDoCliente(total,dado){
+   var resultado=dado-total;
+   return resultado;
+  }
+   function evento(){
+   var tot=document.getElementById("num").value;
+   var tot2=document.getElementById("num2").value;
+   var resl="O troco do cliente é:R$"+trocoDoCliente(tot,tot2);
+   if(tot2<tot){
+    alert("Valor pago é insuficinte para efetuar a compra!");
+    }else{
+    document.getElementById("mensagem").innerHTML=resl;
+    }
+    }
+   
+
+ </script>
+</head>
+<BODY>
+<h1>caixa</h1>
+<table>
+<tr>
+<td width = "200">valor total da compra: </td>
+<td width="30"><input type="text" id="num" value=""size="3" placeholder="R$"/></td>
+</tr>
+<tr>
+<td width="150"> valor pago pelo cliente:</td>
+<td width="30"><input type="text" id="num2" value=""size="3" placeholder="R$"/></td>
+</tr>
+<tr><td></td>
+<td><input type="button" value="Calcular" onclick="evento()"/></td>
+</tr>
+</table>
+<p id="mensagem"></p>
+</body>
+</html>
+
+

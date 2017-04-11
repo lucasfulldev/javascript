@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<title></title>
+<head>
+
+<script>
+function temp(c){
+	var f=c*1.8+32;
+	return f;
+	}
+function evento(){
+	var tot= window.document.getElementById("num").value;
+	var resul = "A conversão é: "+temp(tot)+"ºF";
+	window.document.getElementById("Mensagem").innerHTML=resul;
+        }
+</script>
+</head>
+<body><center>
+<h1>Convenção de Celsius para Fahrenheit </h1>
+<table>
+<tr>
+<td width="150">Grau Celsius:</td>
+<td width="30"><input type="text" id="num" value="" size="7" placeholder="Digite"/></td>
+<tr>
+<td width="30" align="center"><input type="button" value="Converter" onclick="evento()" /></td>
+</tr>
+</table>
+<br>
+<p id="Mensagem"></p>
+</center></body>
+</html>
